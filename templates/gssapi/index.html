@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GSSAPI TEST</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    yyyyyyy
+    {{ user }}
+{% else %}
+    nnnnnnn
+{% endif %}
+<h4>Hello world</h4>
+
+{% for obj in u %}
+    {{ obj }}
+{% endfor %}
+
+<br />
+{{ req }}
+<br />
+result: {{ req }}
+<br />
+krb_context: {{ req }}
+<br />
+gssstring: {{ gssstring  }}
+<br />
+principal: {{ principal }}
+<br />
+krb_r: {{ krb_r }}
+<br />
+st: {{ st }}
+<br />
+records: {{ records }}
+<br />
+
+
+<b>request.META</b><br>
+{% for k_meta, v_meta in request.META.items %}
+  <code>{{ k_meta }}</code> : {{ v_meta }} <br>
+{% endfor %}
+<br />
+bbbbbb
+<br />
+</body>
+</html>
